@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db560c860acdb042b59751e4bb7f5e7, type: 3}
   m_Name: InputData_LocalPlayerBasicInput
   m_EditorClassIdentifier: 
-  horizontal: 0
-  vertical: 0
+  Horizontal: 0
+  Vertical: 0
+  _axisActive: 1
+  AxisNameHorizontal: Horizontal
+  AxisNameVertical: Vertical
+  _KeyBaseHorizontalActive: 0
+  PositiveHorizontalKeycode: 0
+  NegativeHorizontalKeycode: 0
+  LerpSpeed: 1
+  _KeyBaseVerticalActive: 0
+  PositiveVerticalKeyCode: 0
+  NegativeVerticalKeycode: 0

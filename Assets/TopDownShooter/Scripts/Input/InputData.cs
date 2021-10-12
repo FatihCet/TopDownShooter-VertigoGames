@@ -12,17 +12,17 @@ namespace TopDownShooter.PlayerInput
 
         [Header("Axis Base Controller")]
         [SerializeField] private bool _axisActive;
-        public string AxisNameHorizontal;
-        public string AxisNameVertical;
+        [SerializeField] private string AxisNameHorizontal;
+        [SerializeField] private string AxisNameVertical;
 
         [Header("Key Base Control")]
         [SerializeField] private bool _KeyBaseHorizontalActive;
-        public KeyCode PositiveHorizontalKeycode;
-        public KeyCode NegativeHorizontalKeycode;
-        public float LerpSpeed = 1;
+        [SerializeField]private KeyCode PositiveHorizontalKeycode;
+        [SerializeField] private KeyCode NegativeHorizontalKeycode;
+        [SerializeField] private float _increaseAmound = 0.015f;
         [SerializeField] private bool _KeyBaseVerticalActive;
-        public KeyCode PositiveVerticalKeyCode;
-        public KeyCode NegativeVerticalKeycode;
+        [SerializeField] private KeyCode PositiveVerticalKeyCode;
+        [SerializeField] private KeyCode NegativeVerticalKeycode;
 
 
         public void ProcesInput()
@@ -37,49 +37,37 @@ namespace TopDownShooter.PlayerInput
             {
                 if (_KeyBaseHorizontalActive)
                 {
-                    bool positiveActive = Input.GetKey(PositiveHorizontalKeycode);
-                    bool negativeActive = Input.GetKey(NegativeHorizontalKeycode);
-                    if (positiveActive && negativeActive)
-                    {
-                        Horizontal = Mathf.Lerp(Horizontal, 1, Time.time * LerpSpeed);
-
-                    }
-                    else if(negativeActive && !positiveActive)
-                    {
-
-                        Horizontal = Mathf.Lerp(Horizontal, 1, Time.time * LerpSpeed);
-                    }
-                    else
-                    {
-                        Horizontal = Mathf.Lerp(Horizontal, 0, Time.time * LerpSpeed);
-                    }
+                    KeyBaseAxisControl(ref Horizontal, PositiveHorizontalKeycode, NegativeHorizontalKeycode);
+                    
                 }
                 if (_KeyBaseVerticalActive)
                 {
-
+                    KeyBaseAxisControl(ref Vertical, PositiveVerticalKeyCode, NegativeVerticalKeycode);
                 }
 
             }
         }
 
-        public void KeyBaseHorizontal(ref float value,KeyCode positive,KeyCode negative)
+        public void KeyBaseAxisControl(ref float value,KeyCode positive,KeyCode negative)
         {
             bool positiveActive = Input.GetKey(positive);
             bool negativeActive = Input.GetKey(negative);
-            if (positiveActive && negativeActive)
+            if (positiveActive)
             {
-                Horizontal = Mathf.Lerp(Horizontal, 1, Time.time * LerpSpeed);
+                value = +_increaseAmound;
 
             }
-            else if (negativeActive && !positiveActive)
+            else if (negativeActive)
             {
 
-                Horizontal = Mathf.Lerp(Horizontal, 1, Time.time * LerpSpeed);
+                value = -_increaseAmound;
             }
             else
             {
-                Horizontal = Mathf.Lerp(Horizontal, 0, Time.time * LerpSpeed);
+                value = 0;
             }
+
+            value = Mathf.Clamp(value,-1,1);
         }
 
 

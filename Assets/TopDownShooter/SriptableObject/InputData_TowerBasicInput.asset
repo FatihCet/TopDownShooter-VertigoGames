@@ -17,9 +17,9 @@ MonoBehaviour:
   _axisActive: 0
   AxisNameHorizontal: 
   AxisNameVertical: 
-  _KeyBaseHorizontalActive: 0
-  PositiveHorizontalKeycode: 0
-  NegativeHorizontalKeycode: 0
+  _KeyBaseHorizontalActive: 1
+  PositiveHorizontalKeycode: 113
+  NegativeHorizontalKeycode: 101
   LerpSpeed: 1
   _KeyBaseVerticalActive: 0
   PositiveVerticalKeyCode: 0
