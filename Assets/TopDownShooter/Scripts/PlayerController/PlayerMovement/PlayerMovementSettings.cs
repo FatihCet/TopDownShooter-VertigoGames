@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace TopDownShooter.PlayerMovement
+namespace TopDownShooter.PlayerCotrols
 {
     [CreateAssetMenu(menuName ="TopDownShooter/Player/Movement Settings")]
     public class PlayerMovementSettings : ScriptableObject

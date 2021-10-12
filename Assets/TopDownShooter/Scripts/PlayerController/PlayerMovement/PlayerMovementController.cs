@@ -4,7 +4,7 @@ using TopDownShooter.PlayerInput;
 using UnityEngine;
 
 
-namespace TopDownShooter.PlayerMovement
+namespace TopDownShooter.PlayerCotrols
 {
     public class PlayerMovementController : MonoBehaviour
     {
@@ -17,8 +17,8 @@ namespace TopDownShooter.PlayerMovement
 
         private void Update()
         {
-            _rigidbody.MovePosition(_rigidbody.position+(_rigidbody.transform.forward * _inputData.vertical*_playerMovementSettings.verticalSpeed));
-            _rigidbody.MovePosition(_rigidbody.position+(_rigidbody.transform.right * _inputData.horizontal*_playerMovementSettings.horizontalSpeed));
+            _rigidbody.MovePosition(_rigidbody.position+(_rigidbody.transform.forward * _inputData.Vertical*_playerMovementSettings.verticalSpeed));
+            _rigidbody.MovePosition(_rigidbody.position+(_rigidbody.transform.right * _inputData.Horizontal*_playerMovementSettings.horizontalSpeed));
 
 
         }
