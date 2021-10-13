@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940d4a423f26fba499f21b8f416739fc, type: 3}
   m_Name: PlayerMovementSettings_LocalPlayer
   m_EditorClassIdentifier: 
-  horizontalSpeed: 0.25
-  verticalSpeed: 0.25
+  horizontalSpeed: 1
+  verticalSpeed: 0.1

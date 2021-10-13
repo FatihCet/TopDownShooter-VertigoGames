@@ -20,7 +20,7 @@ MonoBehaviour:
   _KeyBaseHorizontalActive: 1
   PositiveHorizontalKeycode: 113
   NegativeHorizontalKeycode: 101
-  LerpSpeed: 1
+  _increaseAmound: 10
   _KeyBaseVerticalActive: 0
   PositiveVerticalKeyCode: 0
   NegativeVerticalKeycode: 0

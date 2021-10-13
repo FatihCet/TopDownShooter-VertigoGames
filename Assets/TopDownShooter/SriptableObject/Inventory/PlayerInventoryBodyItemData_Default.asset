@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6499472e6da92114e9a0cbad7f2618b7, type: 3}
-  m_Name: RotationSettings_LocalPlayer
+  m_Script: {fileID: 11500000, guid: 82927298dcaffaf4c97a87eff010d86c, type: 3}
+  m_Name: PlayerInventoryBodyItemData_Default
   m_EditorClassIdentifier: 
-  towerRotationSpeed: 3
+  _itemId: default_body
+  _inventoryItemDataType: 1
+  _prefab: {fileID: -4600582537759395847, guid: e076c71eedad1e24f9d49ca30600bc48,
+    type: 3}
